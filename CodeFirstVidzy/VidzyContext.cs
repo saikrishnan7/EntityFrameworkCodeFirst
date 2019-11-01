@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CodeFirstVidzy.EntityConfiguration;
 
 namespace CodeFirstVidzy
 {
@@ -15,6 +16,12 @@ namespace CodeFirstVidzy
         public VidzyContext() : base("name=VidzyCodeFirst")
         {
 
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new VideoEntityConfiguration());
+            modelBuilder.Configurations.Add(new GenreEntityConfiguration());
         }
     }
 }

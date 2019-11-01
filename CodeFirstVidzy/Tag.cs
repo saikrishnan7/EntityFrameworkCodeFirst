@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace CodeFirstVidzy
 {
-    public enum Classification : byte
+    public class Tag
     {
-        Silver=1,
-        Gold=2,
-        Platinum=3
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public IList<Video> Videos { get; set; }
     }
 }
