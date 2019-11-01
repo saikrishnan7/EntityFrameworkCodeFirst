@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5622B1C-7F0D-4EC3-949E-E2448E684DEB}</ProjectGuid>
+    <ProjectGuid>{F5801994-3DD7-446D-B303-B11B43A1B5B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CodeFirst</RootNamespace>
-    <AssemblyName>CodeFirst</AssemblyName>
+    <RootNamespace>CodeFirstVidzy</RootNamespace>
+    <AssemblyName>CodeFirstVidzy</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201910311342071_InitialModel.cs" />
-    <Compile Include="Migrations\201910311342071_InitialModel.designer.cs">
-      <DependentUpon>201910311342071_InitialModel.cs</DependentUpon>
+    <Compile Include="Classification.cs" />
+    <Compile Include="Genre.cs" />
+    <Compile Include="Migrations\201910312352515_InitialModel.cs" />
+    <Compile Include="Migrations\201910312352515_InitialModel.designer.cs">
+      <DependentUpon>201910312352515_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910312355112_AddSomeDataIntoGenresTable.cs" />
+    <Compile Include="Migrations\201910312355112_AddSomeDataIntoGenresTable.designer.cs">
+      <DependentUpon>201910312355112_AddSomeDataIntoGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911010003340_OneGenrePerVideo.cs" />
+    <Compile Include="Migrations\201911010003340_OneGenrePerVideo.designer.cs">
+      <DependentUpon>201911010003340_OneGenrePerVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911010008061_AddClassificationTableAndClassificationColumnToVideo.cs" />
+    <Compile Include="Migrations\201911010008061_AddClassificationTableAndClassificationColumnToVideo.designer.cs">
+      <DependentUpon>201911010008061_AddClassificationTableAndClassificationColumnToVideo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="VidzyContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,8 +76,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910311342071_InitialModel.resx">
-      <DependentUpon>201910311342071_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910312352515_InitialModel.resx">
+      <DependentUpon>201910312352515_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910312355112_AddSomeDataIntoGenresTable.resx">
+      <DependentUpon>201910312355112_AddSomeDataIntoGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911010003340_OneGenrePerVideo.resx">
+      <DependentUpon>201911010003340_OneGenrePerVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911010008061_AddClassificationTableAndClassificationColumnToVideo.resx">
+      <DependentUpon>201911010008061_AddClassificationTableAndClassificationColumnToVideo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
