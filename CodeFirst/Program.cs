@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using SqlProviderServices = System.Data.Entity.SqlServer.SqlProviderServices;
 using System.Data.Entity;
 
 namespace CodeFirst

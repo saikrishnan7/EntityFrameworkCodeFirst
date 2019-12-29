@@ -1,9 +1,6 @@
 namespace CodeFirstExistingDB
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
     public partial class PlutoContext : DbContext
     {
@@ -21,7 +18,7 @@ namespace CodeFirstExistingDB
             modelBuilder.Entity<Author>()
                 .HasMany(e => e.Courses)
                 .WithOptional(e => e.Author)
-                .HasForeignKey(e => e.Author_Id);
+                .HasForeignKey(e => e.AuthorId);
 
             modelBuilder.Entity<Course>()
                 .HasMany(e => e.Tags)

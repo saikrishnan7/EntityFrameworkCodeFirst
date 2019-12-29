@@ -1,6 +1,5 @@
 ﻿namespace CodeFirstVidzy.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class Exercise5FluentAPIChanges : DbMigration
